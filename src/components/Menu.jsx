@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Navbar() {
+function Menu() {
   const [showMenu, setShowMenu] = useState(false);
   const [scrollHeader, setScrollHeader] = useState(false);
 
@@ -57,4 +57,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Menu;
