@@ -10,7 +10,6 @@ function Home() {
             "Bread and butter much better." <br /> Love at First Bite !!
           </h1>
           <a href="#" className="button">Explore</a>
-          <img src="/images/bread-1.png" className="home__bread" />
         </div>
 
         <div className="home__image">

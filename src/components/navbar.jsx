@@ -22,9 +22,6 @@ function Navbar() {
           <div className="nav__close" onClick={() => setShowMenu(false)}>
             <i className="ri-close-line"></i>
           </div>
-
-          <img src="/images/bread-4.png" className="nav__img-1" />
-          <img src="/images/bread-1.png" className="nav__img-2" />
         </div>
 
         <div className="nav__toggle" onClick={() => setShowMenu(true)}>
