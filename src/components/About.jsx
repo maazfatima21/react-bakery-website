@@ -6,14 +6,18 @@ function About() {
           <h2 className="section__title">About Us</h2>
 
           <p className="about__description">
-            We prepare different types of bakery products that are made at home,
+            We prepare different types of bakery products made at home,
             maintaining tradition using only the best ingredients and local products.
           </p>
 
-          <a href="#" className="button">Know More</a>
+          <button className="button">Know More</button>
         </div>
 
-        <img src="/images/about-bread.png" className="about__img" />
+        <img
+          src="/images/about-bread.png"
+          className="about__img"
+          alt="About our bakery"
+        />
       </div>
     </section>
   );

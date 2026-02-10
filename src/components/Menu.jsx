@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Menu() {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,42 +17,48 @@ function Menu() {
   return (
     <header className={`header ${scrollHeader ? "scroll-header" : ""}`} id="header">
       <nav className="nav container">
-        <a href="#">
-          <img 
-            src="/images/logo.png" 
-            className="nav__logo" 
+        <Link to="/">
+          <img
+            src="/images/logo.png"
+            className="nav__logo"
             width="125"
-            alt="Bakery Logo"
+            alt="Tasty Tidbits Logo"
           />
-        </a>
+        </Link>
 
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
           <ul className="nav__list">
-            <li className="nav__item">
-              <a href="#home" className="nav__link" onClick={() => setShowMenu(false)}>Home</a>
-            </li>
-            <li className="nav__item">
-              <a href="#new" className="nav__link" onClick={() => setShowMenu(false)}>New</a>
-            </li>
-            <li className="nav__item">
-              <a href="#about" className="nav__link" onClick={() => setShowMenu(false)}>About Us</a>
-            </li>
-            <li className="nav__item">
-              <a href="#favorite" className="nav__link" onClick={() => setShowMenu(false)}>Favorites</a>
-            </li>
-            <li className="nav__item">
-              <a href="#visit" className="nav__link" onClick={() => setShowMenu(false)}>Location</a>
-            </li>
+            {["home", "new", "about", "favorite", "visit"].map((item) => (
+              <li key={item} className="nav__item">
+                <a
+                  href={`#${item}`}
+                  className="nav__link"
+                  onClick={() => setShowMenu(false)}
+                >
+                  {item === "favorite"
+                    ? "Favorites"
+                    : item.charAt(0).toUpperCase() + item.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
 
-          <div className="nav__close" onClick={() => setShowMenu(false)}>
+          <button
+            className="nav__close"
+            onClick={() => setShowMenu(false)}
+            aria-label="Close menu"
+          >
             <i className="ri-close-line"></i>
-          </div>
+          </button>
         </div>
 
-        <div className="nav__toggle" onClick={() => setShowMenu(true)}>
+        <button
+          className="nav__toggle"
+          onClick={() => setShowMenu(true)}
+          aria-label="Open menu"
+        >
           <i className="ri-menu-fill"></i>
-        </div>
+        </button>
       </nav>
     </header>
   );

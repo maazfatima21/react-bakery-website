@@ -6,13 +6,13 @@ function Footer() {
         <div className="footer__section">
           <h3 className="footer__title">Address</h3>
           <ul className="footer__list">
-            <li><address className="footer__info">MN. Zen #945 <br /> ita chile</address></li>
+            <li><address className="footer__info">MN. Zen #945, Ita Chile</address></li>
             <li><address className="footer__info">9AM - 11PM</address></li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h3 className="footer__title">Contact Me</h3>
+          <h3 className="footer__title">Contact</h3>
           <ul className="footer__list">
             <li><address className="footer__info">tastytidbits@gmail.com</address></li>
             <li><address className="footer__info">+91-9876543210</address></li>
@@ -20,7 +20,7 @@ function Footer() {
         </div>
 
         <div className="footer__section">
-          <h3 className="footer__title">Follow US</h3>
+          <h3 className="footer__title">Follow Us</h3>
           <div className="footer__social">
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
               <i className="ri-facebook-circle-line"></i>
@@ -37,7 +37,7 @@ function Footer() {
       </div>
 
       <div className="footer__copy">
-        © All Rights Reserved By Tasty Tidbits
+        © {new Date().getFullYear()} Tasty Tidbits. All rights reserved.
       </div>
     </footer>
   );

@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 function Home() {
-
   useEffect(() => {
     const sr = ScrollReveal({
       origin: "top",
@@ -16,6 +15,8 @@ function Home() {
     sr.reveal(".home__data");
     sr.reveal(".home__image", { delay: 600 });
     sr.reveal(".home__footer", { delay: 800, origin: "bottom" });
+
+    return () => sr.destroy();
   }, []);
 
   return (
@@ -34,7 +35,9 @@ function Home() {
             "Bread and butter much better." <br /> Love at First Bite !!
           </h1>
 
-          <Link to="/products" className="button">Explore</Link>
+          <Link to="/products" className="button">
+            Explore
+          </Link>
         </div>
 
         <div className="home__image">
