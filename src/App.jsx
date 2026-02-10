@@ -17,6 +17,8 @@ function App() {
         <About />
         <Favorite />
         <Visit />
+        <Route path="*" element={<NotFound />} />
+
       </main>
 
       <Footer />
