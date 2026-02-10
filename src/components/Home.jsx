@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-import { Link } from "react-router-dom";
 
 function Home() {
   useEffect(() => {
@@ -13,40 +12,31 @@ function Home() {
     });
 
     sr.reveal(".home__data");
-    sr.reveal(".home__image", { delay: 600 });
-    sr.reveal(".home__footer", { delay: 800, origin: "bottom" });
 
     return () => sr.destroy();
   }, []);
 
   return (
-    <section className="home section" id="home">
-      <img
-        src="/images/home-bg.png"
-        className="home__bg"
-        alt="Bakery background"
-        loading="lazy"
-      />
-      <div className="home__shadow"></div>
+    <section
+      className="home section"
+      id="home"
+      style={{ backgroundImage: "url('/images/home-bg1.png')" }}
+    >
+      <div className="home__overlay"></div>
 
-      <div className="home__container container grid">
+      <div className="home__container">
         <div className="home__data">
-          <h1 className="home__title">
-            "Bread and butter much better." <br /> Love at First Bite !!
-          </h1>
+          <span className="home__subtitle">
+            Bread and butter much better. <br /> Love at First Bite !!
+          </span>
 
-          <Link to="/products" className="button">
-            Explore
-          </Link>
-        </div>
+          <h1 className="home__title">TASTY TIDBITES</h1>
 
-        <div className="home__image">
-          <img
-            src="/images/home-bread.png"
-            className="home__img"
-            alt="Fresh baked bread"
-            loading="lazy"
-          />
+          <p className="home__description">
+            Exceedingly delicious bakery and cafe. <br />
+            Naturally crafted and made with premium ingredients. <br />
+            Baked fresh daily for your sweetest moments.
+          </p>
         </div>
       </div>
     </section>

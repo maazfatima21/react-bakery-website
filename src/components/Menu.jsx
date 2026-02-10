@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Menu() {
   const [showMenu, setShowMenu] = useState(false);
   const [scrollHeader, setScrollHeader] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,31 +17,64 @@ function Menu() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = showMenu ? "hidden" : "auto";
+  }, [showMenu]);
+
+  const handleScrollTo = (sectionId) => {
+    setShowMenu(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const navItems = [
+    { name: "Home", id: "home" },
+    { name: "New", id: "new" },
+    { name: "About", id: "about" },
+    { name: "Favorites", id: "favorite" },
+    { name: "Visit", id: "visit" },
+  ];
+
   return (
-    <header className={`header ${scrollHeader ? "scroll-header" : ""}`} id="header">
+    <header
+      className={`header ${scrollHeader ? "scroll-header" : ""}`}
+      id="header"
+    >
       <nav className="nav container">
-        <Link to="/">
+        <div
+          className="nav__logo"
+          onClick={() => handleScrollTo("home")}
+          style={{ cursor: "pointer" }}
+        >
           <img
             src="/images/logo.png"
-            className="nav__logo"
-            width="125"
             alt="Tasty Tidbits Logo"
           />
-        </Link>
+        </div>
 
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
           <ul className="nav__list">
-            {["home", "new", "about", "favorite", "visit"].map((item) => (
-              <li key={item} className="nav__item">
-                <a
-                  href={`#${item}`}
+            {navItems.map((item) => (
+              <li key={item.id} className="nav__item">
+                <button
                   className="nav__link"
-                  onClick={() => setShowMenu(false)}
+                  onClick={() => handleScrollTo(item.id)}
                 >
-                  {item === "favorite"
-                    ? "Favorites"
-                    : item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
+                  {item.name}
+                </button>
               </li>
             ))}
           </ul>
@@ -56,6 +92,7 @@ function Menu() {
           className="nav__toggle"
           onClick={() => setShowMenu(true)}
           aria-label="Open menu"
+          aria-expanded={showMenu}
         >
           <i className="ri-menu-fill"></i>
         </button>
