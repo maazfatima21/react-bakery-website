@@ -1,47 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [scrollHeader, setScrollHeader] = useState(false);
-
-  // Show background when scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 50) {
-        setScrollHeader(true);
-      } else {
-        setScrollHeader(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <header className={`header ${scrollHeader ? "scroll-header" : ""}`}>
+    <header className="header" id="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">
-          <img src="/img/logo.png" width="120" />
+        <a href="#">
+          <img src="/images/logo.png" className="nav__logo" width="125" />
         </a>
 
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
           <ul className="nav__list">
-            <li><a href="#home" onClick={() => setShowMenu(false)}>Home</a></li>
-            <li><a href="#new" onClick={() => setShowMenu(false)}>New</a></li>
-            <li><a href="#about" onClick={() => setShowMenu(false)}>About</a></li>
-            <li><a href="#favorite" onClick={() => setShowMenu(false)}>Favorite</a></li>
-            <li><a href="#visit" onClick={() => setShowMenu(false)}>Visit</a></li>
+            <li className="nav__item"><a href="#home" className="nav__link">Home</a></li>
+            <li className="nav__item"><a href="#new" className="nav__link">New</a></li>
+            <li className="nav__item"><a href="#about" className="nav__link">About Us</a></li>
+            <li className="nav__item"><a href="#favorite" className="nav__link">Favorites</a></li>
+            <li className="nav__item"><a href="#visit" className="nav__link">Location</a></li>
           </ul>
 
           <div className="nav__close" onClick={() => setShowMenu(false)}>
-            ✖
+            <i className="ri-close-line"></i>
           </div>
+
+          <img src="/images/bread-4.png" className="nav__img-1" />
+          <img src="/images/bread-1.png" className="nav__img-2" />
         </div>
 
         <div className="nav__toggle" onClick={() => setShowMenu(true)}>
-          ☰
+          <i className="ri-menu-fill"></i>
         </div>
       </nav>
     </header>
