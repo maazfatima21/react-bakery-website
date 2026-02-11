@@ -77,7 +77,7 @@ git clone https://github.com/maazfatima21/website-.git
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](Screenshots/home.png)
 
 ### New Page
 ![NewPage](screenshots/new.png)
