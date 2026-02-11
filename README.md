@@ -80,16 +80,16 @@ git clone https://github.com/maazfatima21/website-.git
 ![Home Page](Screenshots/home.png)
 
 ### New Page
-![NewPage](screenshots/new.png)
+![NewPage](Screenshots/new.png)
 
 ### About
-![About](screenshots/about.png)
+![About](Screenshots/about.png)
 
 ### Favorites
-![Favorites Page](screenshots/favorites.png)
+![Favorites Page](Screenshots/favorites.png)
 
 ### Visit pages
-![Visit](screenshots/visit.png)
+![Visit](Screenshots/visit.png)
 
 
 ### 🚀 Live Demo
