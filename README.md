@@ -77,25 +77,19 @@ git clone https://github.com/maazfatima21/website-.git
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.jpg)
+![Home Page](screenshots/home.png)
 
-### Login and Myorder
-![Loginandmyorder](screenshots/login%20and%20myorder.jpg)
-
-### Products Page
-![Products Page](screenshots/products.jpg)
-
-### Contact Page
-![contact Page](screenshots/contact.jpg)
+### New Page
+![NewPage](screenshots/new.png)
 
 ### About
-![About](screenshots/about.jpg)
+![About](screenshots/about.png)
 
-### Cart
-![Cart Page](screenshots/cart.jpg)
+### Favorites
+![Favorites Page](screenshots/favorites.png)
 
-### Admin pages
-![Admin](screenshots/Admin.jpg)
+### Visit pages
+![Visit](screenshots/visit.png)
 
 
 ### 🚀 Live Demo
