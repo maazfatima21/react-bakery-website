@@ -1,16 +1,103 @@
-# React + Vite
+# 🥐 Bakery Website – React Frontend
+📌 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive bakery website developed using React (Vite), implementing a modular component-based architecture.
 
-Currently, two official plugins are available:
+The project demonstrates reusable components, structured state management, responsive layouts, and clean UI design aligned with modern frontend development standards.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+React (Vite)
+JavaScript (ES6+)
+HTML5
+CSS3
+ScrollReveal (for animations)
+Git & GitHub
 
-## React Compiler
+## 📂 Project Structure
+bakery-react/
+│
+├── public/
+│   └── img/
+│
+├── src/
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Favorite.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Home.jsx
+│   │   ├── Menu.jsx
+│   │   ├── New.jsx
+│   │   └── Visit.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── style.css
+│
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+-- Responsive design for mobile, tablet, and desktop
+-- Component-based architecture
+-- Clean and reusable UI sections
+-- Scroll animations using ScrollReveal
+-- Organized folder structure
+-- Optimized asset handling via Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ⚙️ Installation & Setup
+
+# Clone the Repository
+```bash
+git clone https://github.com/maazfatima21/website-.git
+```
+
+# Navigate to the project folder
+```bash
+ cd repository-name
+```
+
+# Install dependencies
+```bash
+ npm install
+```
+# Run development server
+```bash
+ npm run dev
+```
+
+# Build for production
+```bash
+ npm run build
+```
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.jpg)
+
+### Login and Myorder
+![Loginandmyorder](screenshots/login%20and%20myorder.jpg)
+
+### Products Page
+![Products Page](screenshots/products.jpg)
+
+### Contact Page
+![contact Page](screenshots/contact.jpg)
+
+### About
+![About](screenshots/about.jpg)
+
+### Cart
+![Cart Page](screenshots/cart.jpg)
+
+### Admin pages
+![Admin](screenshots/Admin.jpg)
+
+
+### 🚀 Live Demo
+
+**link** : https://your-vercel-link.vercel.app

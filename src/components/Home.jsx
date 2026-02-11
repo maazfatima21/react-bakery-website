@@ -20,7 +20,7 @@ function Home() {
     <section
       className="home section"
       id="home"
-      style={{ backgroundImage: "url('/images/home-bg1.png')" }}
+      style={{ backgroundImage: "url('/images/home-bg.png')" }}
     >
       <div className="home__overlay"></div>
 
