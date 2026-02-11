@@ -1,6 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
+      <div className="divider"></div>
       <div className="footer__container container">
 
         <div className="footer__brand">

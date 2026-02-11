@@ -1,8 +1,32 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+
 function About() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: "50px",
+      duration: 900,
+      delay: 100,
+      reset: false,
+    });
+
+    sr.reveal(".about__text", {
+      origin: "left",
+    });
+
+    sr.reveal(".about__images", {
+      origin: "right",
+      delay: 200,
+    });
+
+    return () => sr.destroy();
+  }, []);
+
   return (
     <section className="about section" id="about">
+      <div className="divider"></div>
       <div className="about__container container">
-
+         
         {/* LEFT SIDE */}
         <div className="about__text">
           <h2 className="section__title">About</h2>

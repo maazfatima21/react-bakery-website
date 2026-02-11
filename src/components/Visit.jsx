@@ -1,4 +1,27 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+
 function Visit() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: "50px",
+      duration: 900,
+      delay: 150,
+      reset: false,
+    });
+
+    sr.reveal(".visit__name", {
+      origin: "top",
+    });
+
+    sr.reveal(".visit__description", {
+      origin: "bottom",
+      delay: 300,
+    });
+
+    return () => sr.destroy();
+  }, []);
+
   return (
     <section className="visit section" id="visit">
       <div className="visit__container">

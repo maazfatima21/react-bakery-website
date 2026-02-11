@@ -11,7 +11,7 @@ function New() {
     },
     {
       id: 2,
-      title: "Red Rose Cupcake",
+      title: "Red Velvet Cupcake",
       description:
         "Red and White combo made with love, Tangy Touch.",
       img: "/images/new-bread-2.png",
@@ -27,6 +27,9 @@ function New() {
 
   return (
     <section className="new section" id="new">
+      <div className="divider"></div>
+
+    <div className="container">
       <h2 className="section__title">New</h2>
       <p className="new__subtitle">Latest Creations</p>
 
@@ -41,6 +44,7 @@ function New() {
           </article>
         ))}
       </div>
+    </div>
     </section>
   );
 }

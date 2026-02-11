@@ -8,7 +8,6 @@ import About from "./components/About";
 import Favorite from "./components/Favorite";
 import Visit from "./components/Visit";
 import Footer from "./components/Footer";
-// import NotFound from "./components/NotFound"; // use later if adding routing
 
 function App() {
 

@@ -5,9 +5,9 @@ function Home() {
   useEffect(() => {
     const sr = ScrollReveal({
       origin: "top",
-      distance: "60px",
-      duration: 2000,
-      delay: 300,
+      distance: "40px",
+      duration: 1400,
+      delay: 100,
       reset: false,
     });
 
@@ -24,7 +24,7 @@ function Home() {
     >
       <div className="home__overlay"></div>
 
-      <div className="home__container">
+      <div className="home__container container">
         <div className="home__data">
           <span className="home__subtitle">
             Bread and butter much better. <br /> Love at First Bite !!
