@@ -50,26 +50,26 @@ bakery-react/
 
 ### ⚙️ Installation & Setup
 
-# Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/maazfatima21/website-.git
 ```
 
-# Navigate to the project folder
+### Navigate to the project folder
 ```bash
  cd repository-name
 ```
 
-# Install dependencies
+### Install dependencies
 ```bash
  npm install
 ```
-# Run development server
+### Run development server
 ```bash
  npm run dev
 ```
 
-# Build for production
+### Build for production
 ```bash
  npm run build
 ```
