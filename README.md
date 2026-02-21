@@ -14,6 +14,7 @@ ScrollReveal (for animations)
 Git & GitHub
 
 ## 📂 Project Structure
+```
 bakery-react/
 │
 ├── public/
@@ -38,6 +39,7 @@ bakery-react/
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 ## ✨ Features
 
